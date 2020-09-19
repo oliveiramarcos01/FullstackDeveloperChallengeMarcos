@@ -1,0 +1,23 @@
+version: '3'
+services:
+    database:
+        image: mongo
+        container_name: challengeapp
+        environment: 
+            - MONGO_INITDB_DATABASE=challengedb
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=1vacanaovoa
+        volumes: 
+            - './init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro'
+            - './mongo-volume:/data/db'
+        ports: 
+            - '27017-27019:27017-27019'
+    application:
+        build: .
+        command:  bash -c "npm install; node app.js --color=always"
+        ports:
+         - "8080:8080"
+        volumes:
+         - ./:/usr/src/app
+        links:
+         - database

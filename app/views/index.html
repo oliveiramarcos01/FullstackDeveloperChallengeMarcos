@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="hero">
+        <h1>Clientes inadimplentes</h1>
+        <p>Fullstack Developer Challenge realizado por Marcos Oliveira</p>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark"> <!-- add class="thead-light" for a light header -->
+          <tr>
+            <th class="sorter-false filter-false">Foto</th>
+            <th>Nome do cliente</th>
+            <th>Valor (R$)</th>
+            <th>Desde</th>  
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Foto</th>
+            <th>Valor (R$)</th>
+            <th>Nome do cliente</th>
+            <th>Desde</th>
+          </tr>
+          <tr>
+            <th colspan="4" class="ts-pager">
+              <div class="form-inline">
+                <div class="btn-group btn-group-sm mx-1" role="group">
+                  <button type="button" class="btn btn-secondary first" title="first">⇤</button>
+                  <button type="button" class="btn btn-secondary prev" title="previous">←</button>
+                </div>
+                <span class="pagedisplay"></span>
+                <div class="btn-group btn-group-sm mx-1" role="group">
+                  <button type="button" class="btn btn-secondary next" title="next">→</button>
+                  <button type="button" class="btn btn-secondary last" title="last">⇥</button>
+                </div>
+                <select class="form-control-sm custom-select px-1 pagesize" title="Select page size">
+                  <option selected="selected" value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="all">Tudo</option>
+                </select>
+                <select class="form-control-sm custom-select px-4 mx-1 pagenum" title="Select page number"></select>
+              </div>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody id="template-data"></tbody>
+      </table>
+    </div>
+  </div>
+</div>

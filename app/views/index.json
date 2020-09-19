@@ -1,0 +1,15 @@
+{
+    "stylesheet": [
+      "/lib/tablesorter-master/dist/css/theme.bootstrap_4.css",
+      "/lib/tablesorter-master/dist/css/jquery.tablesorter.pager.min.css",
+      "/stylesheets/style.css"
+    ],
+    "script": [
+      "/lib/mustache/mustache.min.js",
+      "/lib/tablesorter-master/dist/js/jquery.tablesorter.js",
+      "/lib/tablesorter-master/dist/js/jquery.tablesorter.widgets.js",
+      "/lib/tablesorter-master/dist/js/extras/jquery.tablesorter.pager.min.js",
+      "/lib/dateformat/jquery-dateFormat.min.js",      
+      "/javascript/index.js"
+    ]
+  }
